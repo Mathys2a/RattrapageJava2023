@@ -7,6 +7,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
+/**
+ * 
+ * @author m.puech
+ * Interface utilisateur permettant a l'utilisateur de saisir un nom et année
+ */
 public interface interfaceUser {
 
 	public static void start(Stage primaryStage) {
@@ -27,6 +32,14 @@ public interface interfaceUser {
 		grid.addRow(2, l_Categorie, tF_Categorie);
 		grid.add(b_Ajouter, 0, 2, 2, 2);
 		grid.add(lV_Personnes, 0, 2, 2, 1);
+		
+		b_Ajouter.setOnAction(e -> {
+		    String nom = tF_Nom.getText();
+		    String annee = tF_Annee.getText();
+		    String categorie = Categorie.getCategorie(Integer.parseInt(annee));
+		    Personne personne = new Personne(nom, annee, categorie);
+		    Personne.personne.addAll(personne);
+		});
 		
 	}
 
