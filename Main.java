@@ -22,6 +22,10 @@ public class Main extends Application {
 			
 			//J'utilise Platform.runLater(() car sinon ma fenetre n'affiche rien et la console n'est pas chargé
 			Platform.runLater(() -> dlFihier_AfficherCategories());
+			
+//			interfaceUser interfaceUtilisateur = new interfaceUser();
+//	        interfaceUser.start(primaryStage);
+	        
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
@@ -30,7 +34,7 @@ public class Main extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
-	
+
 	public static void dlFihier_AfficherCategories() {
 		Categorie.chargerFichierTexte("categorie.txt");
 
