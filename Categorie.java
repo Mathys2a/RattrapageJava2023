@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class Categorie {
 
-	// Variable
+	// Variables
 	 private int i_ageMini;
 	 private int  i_ageMaxi;
 	 private String s_libelle;
